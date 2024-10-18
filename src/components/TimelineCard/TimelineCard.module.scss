@@ -37,15 +37,15 @@
   }
 
   .timeline-card {
-    height: 400px;
+    height: 350px;
 
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 450px) {
       & {
-        height: 350px;
+        height: 400px;
       }
     }
 
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 1200px) {
       & {
         height: 100%;
       }
