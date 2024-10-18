@@ -4,10 +4,16 @@ import { TimelineCard } from "../TimelineCard";
 import styles from "./TimelineCarousel.module.scss";
 import { TimelineHeader } from "../TimelineHeader";
 import Arrow from "@/assets/icons/arrow.svg";
+import { useCarousel } from "@/hooks";
 
 export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const { handleNextClick, handlePrevClick, state } = useCarousel(
+    isRtl,
+    carouselRef,
+    cardRef
+  );
 
   return (
     <>
@@ -16,8 +22,8 @@ export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
           className={`${styles["prev-button"]}  ${styles["timeline-button"]} ${
             !isRtl ? "order-2" : ""
           }`}
-          /*  disabled={!state.prev.nextPrev || state.prev.prevPressed} */
-          /* onClick={handlePrevClick} */
+          disabled={!state.prev.nextPrev || state.prev.prevPressed}
+          onClick={handlePrevClick}
           type="button"
         >
           <Arrow />
@@ -25,8 +31,8 @@ export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
         <button
           className={`${styles["timeline-button"]} ${!isRtl ? "order-1" : ""}`}
           type="button"
-          /* disabled={!state.next.nextNext || state.next.nextPressed} */
-          /*  onClick={handleNextClick} */
+          disabled={!state.next.nextNext || state.next.nextPressed}
+          onClick={handleNextClick}
         >
           <Arrow />
         </button>
@@ -35,8 +41,6 @@ export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
         <div
           id="carouselExampleControls"
           className="carousel slide pb-5 overflow-visible"
-          data-bs-ride="false"
-          data-bs-interval="false"
         >
           <div
             className={`carousel-inner ${styles["carousel-inner"]}`}
@@ -45,9 +49,7 @@ export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
             {timelineData.map((data, idx) => (
               <div
                 key={data.id}
-                className={`carousel-item  ${idx === 0 ? "active" : ""} ${
-                  styles["carousel-item"]
-                }`}
+                className={`carousel-item } ${styles["carousel-item"]}`}
                 ref={idx === 0 ? cardRef : null}
               >
                 <TimelineCard
