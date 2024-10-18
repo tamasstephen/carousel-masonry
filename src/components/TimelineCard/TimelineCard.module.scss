@@ -1,0 +1,39 @@
+.card-wrapper {
+  .card-link-custom {
+    color: #0254a7;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+
+  .timeline-card {
+    height: 400px;
+
+    @media screen and (min-width: 576px) {
+      & {
+        height: 350px;
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      & {
+        height: 100%;
+      }
+    }
+  }
+
+  .timeline-decoration-wrapper {
+    height: 5rem;
+  }
+
+  .timeline-dashed-border {
+    border: 1px dashed var(--bs-dark-bg-subtle);
+  }
+
+  .card-image-wrapper {
+    min-height: 130px;
+  }
+
+  .h5 {
+    font-size: 2rem !important;
+  }
+}
