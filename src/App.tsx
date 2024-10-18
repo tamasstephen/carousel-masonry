@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import styles from "./App.module.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [isArabic, setIsArabic] = useState(true);
+  const toggleLanguageChange = () => {
+    document.documentElement.setAttribute("lang", isArabic ? "en" : "ar");
+    document.documentElement.setAttribute("dir", isArabic ? "ltr" : "rtl");
+    setIsArabic((prevState) => !prevState);
+  };
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="w-100">
+      <div style={{ maxWidth: "1280px", margin: "auto" }}>
+        <div>
+          <button
+            type="button"
+            className={styles["change-language"]}
+            onClick={toggleLanguageChange}
+          >
+            Change language
+          </button>
+        </div>
+        <div>{/* <TimelineCarousel isRtl={isArabic} /> */}</div>
+
+        {/* <Masonry /> */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
