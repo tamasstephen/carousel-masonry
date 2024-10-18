@@ -1,0 +1,37 @@
+.rtl-title,
+.ltr-title {
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  max-width: 60%;
+}
+
+.rtl-title {
+  border-right: 6px solid #0254a7;
+}
+
+.ltr-title {
+  border-left: 6px solid #0254a7;
+}
+
+.view-all-arrow-ltr {
+  transform: rotate(180deg);
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.view-all-arrow-rtl {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.view-all-anchor {
+  color: #0254a7;
+  text-decoration: none;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+
+  svg {
+    height: 15px;
+    width: 15px;
+  }
+}
