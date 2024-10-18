@@ -29,7 +29,7 @@ enum CardsPerView {
 }
 
 const MOBILE_BREAKPOINT = 576;
-const SMALL_BREAKPOINT = 768;
+const SMALL_BREAKPOINT = 1024;
 
 export const useCarousel = (
   isRtl: boolean,

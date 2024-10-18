@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./App.module.scss";
-import { TimelineCarousel } from "./components";
+import { Masonry, TimelineCarousel } from "./components";
 
 function App() {
   const [isArabic, setIsArabic] = useState(true);
@@ -25,8 +25,9 @@ function App() {
         <div>
           <TimelineCarousel isRtl={isArabic} />
         </div>
-
-        {/* <Masonry /> */}
+        <div className="my-5">
+          <Masonry />
+        </div>
       </div>
     </div>
   );
