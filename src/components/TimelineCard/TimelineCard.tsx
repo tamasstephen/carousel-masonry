@@ -1,7 +1,9 @@
 import styles from "./TimelineCard.module.scss";
 import { TimelineData } from "@/types";
+import Arrow from "@/assets/icons/arrow.svg";
 
 interface CardProps {
+  isRtl: boolean;
   isFirst?: boolean;
   isLast?: boolean;
 }
@@ -12,6 +14,7 @@ export const TimelineCard = ({
   image,
   month,
   year,
+  isRtl,
   isFirst,
   isLast,
 }: Omit<TimelineData, "id"> & CardProps) => {
@@ -27,10 +30,22 @@ export const TimelineCard = ({
               src={image}
             />
           </div>
-          <h5 className="card-title pt-3 m-0">{title}</h5>
-          <p className="card-text py-3 m-0">{description}</p>
-          <a href="#" className={`pt-3 m-0 ${styles["card-link-custom"]}`}>
-            view more
+          <h5 className={`card-title pt-3 m-0 ${styles["card-title"]}`}>
+            {title}
+          </h5>
+          <p className={`card-text py-3 m-0 ${styles["card-text"]}`}>
+            {description}
+          </p>
+          <a
+            href="#"
+            className={`d-flex align-items-center fw-bold grid pt-3 m-0 ${styles["card-link-custom"]}`}
+          >
+            <span
+              className={`${isRtl ? styles["icon-rtl"] : styles["icon-ltr"]}`}
+            >
+              <Arrow />
+            </span>
+            <span>view more</span>
           </a>
         </div>
       </div>

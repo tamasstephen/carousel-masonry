@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { timelineData } from "../../data";
+import { timelineData } from "@/data";
 import { TimelineCard } from "../TimelineCard";
 import styles from "./TimelineCarousel.module.scss";
 import { TimelineHeader } from "../TimelineHeader";
@@ -58,6 +58,7 @@ export const TimelineCarousel = ({ isRtl }: { isRtl: boolean }) => {
                   image={data.image}
                   month={data.month}
                   year={data.year}
+                  isRtl={isRtl}
                   isFirst={idx === 0}
                   isLast={idx === timelineData.length - 1}
                 />

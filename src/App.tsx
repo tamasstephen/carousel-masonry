@@ -10,7 +10,7 @@ function App() {
     setIsArabic((prevState) => !prevState);
   };
   return (
-    <div className="w-100">
+    <div className="w-100 container mt-4">
       <div style={{ maxWidth: "1280px", margin: "auto" }}>
         <div>
           <button

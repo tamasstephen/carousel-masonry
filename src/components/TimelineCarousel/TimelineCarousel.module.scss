@@ -33,6 +33,7 @@
   display: flex;
   overflow-x: auto !important;
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
 
   &::-webkit-scrollbar {
     display: none;
