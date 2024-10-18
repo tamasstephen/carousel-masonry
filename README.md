@@ -1,50 +1,39 @@
-# React + TypeScript + Vite
+# Tiny App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a tiny web application built with **React**, **Vite**, **TypeScript**, and **Bootstrap 5**. The app features a **carousel** that displays multiple cards, a **masonry** layout element, and supports **language change** with automatic adjustment of layout alignment for both **LTR (Left-to-Right)** and **RTL (Right-to-Left)** languages.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Carousel Component**: Displays multiple cards in a carousel.
+- **Masonry Layout**: A grid layout component that automatically arranges items in an optimal position based on available vertical space.
+- **Language Switch**: Allows users to switch between languages (LTR and RTL), and automatically adjusts the layout's alignment accordingly.
+- **React + Vite + TypeScript**: Built with modern frontend technologies for fast development and robust type checking.
+- **Bootstrap 5**: Utilized for responsive, mobile-first design.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: Next generation frontend tooling.
+- **TypeScript**: Typed superset of JavaScript for better development experience.
+- **Bootstrap 5**: Popular CSS framework for responsive design and components.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To get started with the project, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone the repository**:
+  
+2. **Navigate to the project directory**:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+3. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+4. **Run the app**:
+    ```bash
+    npm run dev
+    ```
+
+5. Open your browser and go to `http://localhost:3000` to see the app running.
