@@ -3,7 +3,7 @@ import FirstImage from "@/assets/images/001.jpg";
 import SecondImage from "@/assets/images/002.jpg";
 import ThirdImage from "@/assets/images/003.jpg";
 import FourthImage from "@/assets/images/004.jpg";
-import FifthImage from "@./assets/images/005.jpg";
+import FifthImage from "@/assets/images/005.jpg";
 import SixthImage from "@/assets/images/006.jpg";
 
 export const timelineData: TimelineData[] = [
