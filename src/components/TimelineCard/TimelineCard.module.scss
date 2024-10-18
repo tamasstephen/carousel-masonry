@@ -3,6 +3,37 @@
     color: #0254a7;
     text-decoration: none;
     text-transform: capitalize;
+    font-size: 0.875rem;
+  }
+
+  .card-text,
+  .card-title {
+    color: #333333;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .icon-rtl,
+  .icon-ltr {
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: 15px;
+      width: 15px;
+    }
+  }
+
+  .icon-rtl {
+    transform: rotate(180deg);
+    margin-left: 0.5rem;
+  }
+
+  .icon-ltr {
+    margin-right: 0.5rem;
   }
 
   .timeline-card {
